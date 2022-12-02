@@ -1,0 +1,10 @@
+body {
+  overflow: hidden;
+}
+.col-2 {
+  padding-right: 0%;
+}
+
+.col-10 {
+  padding-left: 0%;
+}

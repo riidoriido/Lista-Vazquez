@@ -1,0 +1,28 @@
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Fecha de Nacimiento</th>
+      <th scope="col">Nota</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      [ngClass]="alumno.destacado ? 'text-success' : 'text-danger'"
+      *ngFor="let alumno of alumnos"
+    >
+      <th scope="row">{{ alumno.id }}</th>
+      <td>{{ alumno.nombre }}</td>
+      <td>{{ alumno.apellido }}</td>
+      <td>{{ alumno.nacimiento | date }}</td>
+      <td>
+        {{ alumno.nota }}
+      </td>
+      <button class="btn btn-sm btn-primary" (click)="alumno.destacar()">
+        Aprueba?
+      </button>
+    </tr>
+  </tbody>
+</table>
